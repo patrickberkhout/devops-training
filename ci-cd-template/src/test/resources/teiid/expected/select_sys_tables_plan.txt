@@ -1,0 +1,67 @@
+ProjectNode
+  + Relational Node ID:0
+  + Output Columns:
+    0: VDBName (string)
+    1: SchemaName (string)
+    2: Name (string)
+    3: Type (string)
+    4: NameInSource (string)
+    5: IsPhysical (boolean)
+    6: SupportsUpdates (boolean)
+    7: UID (string)
+    8: Cardinality (integer)
+    9: Description (string)
+    10: IsSystem (boolean)
+    11: IsMaterialized (boolean)
+    12: SchemaUID (string)
+  + Statistics:
+    0: Node Output Rows: 40
+    1: Node Next Batch Process Time: 0
+    2: Node Cumulative Next Batch Process Time: 0
+    3: Node Cumulative Process Time: 0
+    4: Node Next Batch Calls: 1
+    5: Node Blocks: 0
+  + Cost Estimates:Estimated Node Cardinality: -1.0
+  + Child 0:
+    AccessNode
+      + Relational Node ID:1
+      + Output Columns:
+        0: VDBName (string)
+        1: SchemaName (string)
+        2: Name (string)
+        3: Type (string)
+        4: NameInSource (string)
+        5: IsPhysical (boolean)
+        6: SupportsUpdates (boolean)
+        7: UID (string)
+        8: Cardinality (integer)
+        9: Description (string)
+        10: IsSystem (boolean)
+        11: IsMaterialized (boolean)
+        12: SchemaUID (string)
+      + Statistics:
+        0: Node Output Rows: 40
+        1: Node Next Batch Process Time: 0
+        2: Node Cumulative Next Batch Process Time: 0
+        3: Node Cumulative Process Time: 0
+        4: Node Next Batch Calls: 1
+        5: Node Blocks: 0
+      + Cost Estimates:Estimated Node Cardinality: -1.0
+      + Query:SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables
+      + Model Name:SYS
+  + Select Columns:
+    0: SYS.Tables.VDBName
+    1: SYS.Tables.SchemaName
+    2: SYS.Tables.Name
+    3: SYS.Tables.Type
+    4: SYS.Tables.NameInSource
+    5: SYS.Tables.IsPhysical
+    6: SYS.Tables.SupportsUpdates
+    7: SYS.Tables.UID
+    8: SYS.Tables.Cardinality
+    9: SYS.Tables.Description
+    10: SYS.Tables.IsSystem
+    11: SYS.Tables.IsMaterialized
+    12: SYS.Tables.SchemaUID
+  + Data Bytes Sent:3344
+  + Planning Time:3

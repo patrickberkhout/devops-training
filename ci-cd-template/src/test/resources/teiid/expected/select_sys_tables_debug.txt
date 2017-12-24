@@ -1,0 +1,87 @@
+
+============================================================================
+USER COMMAND:
+SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables
+
+----------------------------------------------------------------------------
+OPTIMIZE: 
+SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables
+
+----------------------------------------------------------------------------
+GENERATE CANONICAL: 
+SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables
+
+CANONICAL PLAN: 
+Project(groups=[SYS.Tables], props={PROJECT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]})
+  Source(groups=[SYS.Tables])
+
+
+============================================================================
+EXECUTING PlaceAccess
+
+AFTER: 
+Project(groups=[SYS.Tables], props={PROJECT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]})
+  Access(groups=[SYS.Tables], props={SOURCE_HINT=null, MODEL_ID=Schema name=SYS, nameInSource=null, uuid=tid:2cb59cfd55db})
+    Source(groups=[SYS.Tables])
+
+
+============================================================================
+EXECUTING RaiseAccess
+
+AFTER: 
+Project(groups=[SYS.Tables])
+  Access(groups=[SYS.Tables], props={SOURCE_HINT=null, MODEL_ID=Schema name=SYS, nameInSource=null, uuid=tid:2cb59cfd55db})
+    Source(groups=[SYS.Tables])
+
+
+============================================================================
+EXECUTING AssignOutputElements
+
+AFTER: 
+Project(groups=[SYS.Tables], props={PROJECT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]})
+  Access(groups=[SYS.Tables], props={SOURCE_HINT=null, MODEL_ID=Schema name=SYS, nameInSource=null, uuid=tid:2cb59cfd55db, OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]})
+    Source(groups=[SYS.Tables], props={OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]})
+
+
+============================================================================
+EXECUTING CalculateCost
+
+AFTER: 
+Project(groups=[SYS.Tables], props={PROJECT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], EST_CARDINALITY=-1.0})
+  Access(groups=[SYS.Tables], props={SOURCE_HINT=null, MODEL_ID=Schema name=SYS, nameInSource=null, uuid=tid:2cb59cfd55db, OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], EST_CARDINALITY=-1.0})
+    Source(groups=[SYS.Tables], props={OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], EST_COL_STATS={SYS.Tables.VDBName=[-1.0, -1.0, -1.0], SYS.Tables.SchemaName=[-1.0, -1.0, -1.0], SYS.Tables.Name=[-1.0, -1.0, -1.0], SYS.Tables.Type=[-1.0, -1.0, -1.0], ...}, EST_CARDINALITY=-1.0})
+
+
+============================================================================
+EXECUTING PlanSorts
+
+AFTER: 
+Project(groups=[SYS.Tables])
+  Access(groups=[SYS.Tables])
+    Source(groups=[SYS.Tables])
+
+
+============================================================================
+EXECUTING CollapseSource
+
+AFTER: 
+Project(groups=[SYS.Tables], props={PROJECT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], EST_CARDINALITY=-1.0})
+  Access(groups=[SYS.Tables], props={SOURCE_HINT=null, MODEL_ID=Schema name=SYS, nameInSource=null, uuid=tid:2cb59cfd55db, OUTPUT_COLS=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID], EST_CARDINALITY=-1.0, ATOMIC_REQUEST=SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables})
+
+
+============================================================================
+CONVERTING PLAN TREE TO PROCESS TREE
+
+PROCESS PLAN = 
+ProjectNode(0) output=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID] [SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]
+  AccessNode(1) output=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID] SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables
+
+============================================================================
+
+----------------------------------------------------------------------------
+OPTIMIZATION COMPLETE:
+PROCESSOR PLAN:
+ProjectNode(0) output=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID] [SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID]
+  AccessNode(1) output=[SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID] SELECT SYS.Tables.VDBName, SYS.Tables.SchemaName, SYS.Tables.Name, SYS.Tables.Type, SYS.Tables.NameInSource, SYS.Tables.IsPhysical, SYS.Tables.SupportsUpdates, SYS.Tables.UID, SYS.Tables.Cardinality, SYS.Tables.Description, SYS.Tables.IsSystem, SYS.Tables.IsMaterialized, SYS.Tables.SchemaUID FROM SYS.Tables
+
+============================================================================
